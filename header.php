@@ -8,13 +8,20 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php language_attributes();?>">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><!-- this parameter can be change by WordPress with bloginfo('charset'); -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordPress theme</title>
+    <?php wp_head();?>
+
 </head>
 
-<body>
+<body <?php body_class('esi_class'); ?>>
+
+<?php
+if (function_exists('wp_body_open')){
+    wp_body_open();
+}
+?>
     <header>header</header>
