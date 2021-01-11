@@ -85,5 +85,3 @@ function autoloader($resource = '')
 }
 
 spl_autoload_register('\AQUILA_THEME\Inc\Helpers\autoloader');
-
-
