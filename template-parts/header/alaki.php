@@ -33,7 +33,7 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                         if (!$menu_item->menu_item_parent) {
                             $child_menu_items = $menu_class->get_child_menu_items($header_menus, $menu_item->ID);
                             $has_children = !empty($child_menu_items) && is_array($child_menu_items);
-                            //$has_sub_menu_class = !empty($has_children) ? 'has_submenu' : '';
+                            $has_sub_menu_class = !empty($has_children) ? 'has_submenu' : '';
                             if (!$has_children) {
                     ?>
                                 <li class="nav-item">
@@ -62,6 +62,8 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                                 </li>
                             <?php
                             }
+                            ?>
+                    <?php
                         }
                     }
                     ?>

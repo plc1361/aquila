@@ -17,6 +17,7 @@ class AQUILA_THEME
     {
         // load class.
         Assets::get_instance();
+        menus::get_instance();
         $this->setup_hooks();
     }
 
@@ -44,7 +45,7 @@ class AQUILA_THEME
             'default-color' => '#fff',
             'default-image' => '',
             'default-repeat' => 'no-repeat',
-            ]);
+        ]);
 
         add_theme_support('post-thumbnails');
 
@@ -52,7 +53,26 @@ class AQUILA_THEME
 
         add_theme_support('automatic-feed-links');
 
-        
+        add_theme_support('html5', [
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+        ]);
+
+        add_editor_style();
+
+        add_theme_support('wp-block-styles');
+
+        add_theme_support('align-wide');
+
+        global $content_width;
+
+        if (!isset($content_width)) {
+            $content_width = 1240;
+        }
     }
 }
-
