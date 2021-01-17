@@ -20,3 +20,11 @@ img {
     width: 100%;
     height: auto;
 }
+
+.updated:not(.published){
+    display: none;
+}
+
+.nav-item:hover .dropdown-menu:not(.show){
+    display: block;
+}

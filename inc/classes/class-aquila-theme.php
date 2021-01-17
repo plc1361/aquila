@@ -16,6 +16,7 @@ class AQUILA_THEME
     protected function __construct()
     {
         // load class.
+        Meta_Boxes::get_instance();
         Assets::get_instance();
         menus::get_instance();
         $this->setup_hooks();
@@ -48,6 +49,12 @@ class AQUILA_THEME
         ]);
 
         add_theme_support('post-thumbnails');
+
+        /**
+         * Register image size
+        */
+
+        add_image_size('featured_thumbnail', 350, 233, true);
 
         add_theme_support('customize-selective-refresh-widgets');
 
