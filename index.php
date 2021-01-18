@@ -14,7 +14,7 @@ get_header();
             <div class="container">
                 <?php
                 if (is_home() && !is_front_page()) {
-                    ?>
+                ?>
                     <header class="mb-5">
                         <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
                     </header>
@@ -27,7 +27,7 @@ get_header();
                     $no_of_columns = 3;
                     while (have_posts()) : the_post();
                         if ($index % $no_of_columns === 0) {
-                            ?>
+                    ?>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                             <?php
                         }
@@ -47,6 +47,8 @@ get_header();
             get_template_part('template-parts/content-none');
 
         endif;
+        aquila_pagination();
+
         ?>
     </main>
 </div>

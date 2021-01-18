@@ -1,9 +1,9 @@
 <?php
 /*
-*Bootstrap the Theme.
+* Bootstrap the Theme.
 *
-*@Package Aquila
-*/
+* @package Aquila
+**/
 
 namespace AQUILA_THEME\Inc;
 
@@ -19,6 +19,7 @@ class AQUILA_THEME
         Meta_Boxes::get_instance();
         Assets::get_instance();
         menus::get_instance();
+        Sidebars::get_instance();
         $this->setup_hooks();
     }
 
